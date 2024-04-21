@@ -4,12 +4,14 @@ import { CommonModule } from '@angular/common';
 import { AccountRoutingModule } from './account-routing.module';
 import { AccountHomeComponent } from './pages/account-home/account-home.component';
 import { AccountCardContainerComponent } from './ui/account-card-container/account-card-container.component';
+import { UserDetailsComponent } from './pages/user-details/user-details.component';
 
 
 @NgModule({
   declarations: [
     AccountHomeComponent,
-    AccountCardContainerComponent
+    AccountCardContainerComponent,
+    UserDetailsComponent
   ],
   imports: [
     CommonModule,
