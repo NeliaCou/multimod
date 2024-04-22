@@ -1,0 +1,27 @@
+<form #mugForm="ngForm" (ngSubmit)="addNewMugToMugList()">
+  
+  
+    <fieldset>
+        <label for="name-order">Nom</label>
+        <input id="name-order" name="name-order" type="text" [(ngModel)] = "newMug.name" #name="ngModel">
+      </fieldset>
+
+  <div *ngIf="name.errors">
+    <span *ngIf="name.errors?.['required']">Le nom est requis</span>
+  </div>
+  
+  
+  <fieldset>
+    <label for="price-order">prix</label>
+    <input id="price-order" name="price-order" [(ngModel)] = "newMug.price" #price="ngModel" type="number" required>
+  </fieldset>
+  
+  <div *ngIf="price.errors">
+   <span *ngIf="price.errors?.['required']">Le champ quantité est requis</span>
+  </div>
+  
+      <button type="reset">Restaurer</button>
+      <button type="submit">Sauvegarder</button>
+  </form>
+
+  <app-get-mug></app-get-mug>

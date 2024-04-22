@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'admin', 
     loadChildren: () =>  import('./modules/admin/admin.module').then(m  => m.AdminModule) 
+},
+{
+  path: 'mug', 
+  loadChildren: () =>  import('./modules/mug-list/mug-list.module').then(m  => m.MugListModule) 
 }
 ];
 
