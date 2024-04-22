@@ -22,7 +22,7 @@ export class UserDetailsComponent implements OnInit{
       const userId = Number(params['id']);
       this.userService.getUsers().subscribe(
         users => {
-          this.user = users.find(user => user.id === userId);
+          this.user = users.find(user => user.id === userId) as User;
         },
       )
     }
