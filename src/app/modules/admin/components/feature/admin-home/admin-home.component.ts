@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { UserService } from '../../../../shared/user.service';
-import User from '../../../../models/user';
+import { UserService } from '../../../../../shared/user.service';
+import User from '../../../../../models/user';
 @Component({
   selector: 'app-admin-home',
   templateUrl: './admin-home.component.html',
